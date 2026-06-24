@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS proyectTemperatureHumidity;
+USE proyectTemperatureHumidity;
+
+-- 2. Crear la tabla para las mediciones del sensor Grove
+CREATE TABLE IF NOT EXISTS measures (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    temperature FLOAT NOT NULL,
+    humidity FLOAT NOT NULL,
+    date_reg TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
